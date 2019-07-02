@@ -1,3 +1,45 @@
-PODFILE CHECKSUM: 8da5a9325e46cab6c9499de3b95889613313f22a
+PODS:
+  - Alamofire (4.8.2)
+  - Hero (1.4.0)
+  - PureLayout (3.1.4)
+  - RxCocoa (4.5.0):
+    - RxSwift (>= 4.4.2, ~> 4.4)
+  - RxSwift (4.5.0)
+  - SnapKit (4.2.0)
+  - SwiftyButton/CustomContent (0.5.0):
+    - PureLayout (~> 3.0)
+  - TextFieldEffects (1.5.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - Hero
+  - RxCocoa
+  - RxSwift
+  - SnapKit
+  - SwiftyButton/CustomContent
+  - TextFieldEffects
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - Hero
+    - PureLayout
+    - RxCocoa
+    - RxSwift
+    - SnapKit
+    - SwiftyButton
+    - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
+  PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
+  RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
+  SwiftyButton: 7f1c7774a0aa721cbb6ea287742198ea0ee50c05
+  TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
+
+PODFILE CHECKSUM: efbdecdd1f8e1c78a9f0ae907838e54990633c2d
 
 COCOAPODS: 1.5.3

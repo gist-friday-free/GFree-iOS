@@ -6,5 +6,14 @@ target 'GFree' do
   use_frameworks!
 
   # Pods for GFree
-
+  pod 'RxSwift'
+  pod 'RxCocoa'
+  pod 'Hero'
+  pod 'SnapKit'
+  pod 'Alamofire'
+  
+  pod 'TextFieldEffects'
+  pod 'SwiftyButton/CustomContent'
+  
+  
 end
