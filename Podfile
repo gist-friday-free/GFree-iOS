@@ -14,6 +14,7 @@ target 'GFree' do
   
   pod 'TextFieldEffects'
   pod 'SwiftyButton/CustomContent'
+  pod 'MaterialComponents/BottomSheet'
   
   
 end

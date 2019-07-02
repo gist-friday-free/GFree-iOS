@@ -17,6 +17,10 @@
 		2D7A78FB22CBCA5400AE8B07 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7A78FA22CBCA5400AE8B07 /* LoginViewModel.swift */; };
 		2DAC0FE222CBD0E200CB7F95 /* ColorRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FE122CBD0E200CB7F95 /* ColorRes.swift */; };
 		2DAC0FE422CBD13700CB7F95 /* ViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FE322CBD13700CB7F95 /* ViewExtension.swift */; };
+		2DAC0FE622CBD5CF00CB7F95 /* RxExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FE522CBD5CF00CB7F95 /* RxExtensions.swift */; };
+		2DAC0FE922CBD7E500CB7F95 /* LoginVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FE822CBD7E500CB7F95 /* LoginVerificator.swift */; };
+		2DAC0FED22CBDEA900CB7F95 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FEB22CBDEA900CB7F95 /* SignUpViewController.swift */; };
+		2DAC0FEE22CBDEA900CB7F95 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAC0FEC22CBDEA900CB7F95 /* SignUpViewController.xib */; };
 		A84EBC80637EDF58914DE2E4 /* Pods_GFree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B26800A362B7ECD8E8E03CF /* Pods_GFree.framework */; };
 /* End PBXBuildFile section */
 
@@ -34,6 +38,10 @@
 		2D7A78FA22CBCA5400AE8B07 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		2DAC0FE122CBD0E200CB7F95 /* ColorRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorRes.swift; sourceTree = "<group>"; };
 		2DAC0FE322CBD13700CB7F95 /* ViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtension.swift; sourceTree = "<group>"; };
+		2DAC0FE522CBD5CF00CB7F95 /* RxExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxExtensions.swift; sourceTree = "<group>"; };
+		2DAC0FE822CBD7E500CB7F95 /* LoginVerificator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificator.swift; sourceTree = "<group>"; };
+		2DAC0FEB22CBDEA900CB7F95 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		2DAC0FEC22CBDEA900CB7F95 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		64FB35DC3C0326843EC50514 /* Pods-GFree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GFree.release.xcconfig"; path = "Pods/Target Support Files/Pods-GFree/Pods-GFree.release.xcconfig"; sourceTree = "<group>"; };
 		D647009594476304485EF62A /* Pods-GFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GFree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GFree/Pods-GFree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +80,7 @@
 		2D1CF3B122CBC67300650AB0 /* GFree */ = {
 			isa = PBXGroup;
 			children = (
+				2DAC0FE722CBD7D300CB7F95 /* Service */,
 				2D1CF3C922CBC85800650AB0 /* Application */,
 				2D1CF3C822CBC85600650AB0 /* Common */,
 				2D1CF3C722CBC85400650AB0 /* Data */,
@@ -120,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				2DAC0FE322CBD13700CB7F95 /* ViewExtension.swift */,
+				2DAC0FE522CBD5CF00CB7F95 /* RxExtensions.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -143,11 +153,29 @@
 		2D1CF3CB22CBC86D00650AB0 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				2DAC0FEA22CBDE8F00CB7F95 /* SignUp */,
 				2D1CF3D022CBC9D000650AB0 /* LoginViewController.swift */,
 				2D1CF3CC22CBC89400650AB0 /* Login.storyboard */,
 				2D7A78FA22CBCA5400AE8B07 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		2DAC0FE722CBD7D300CB7F95 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2DAC0FE822CBD7E500CB7F95 /* LoginVerificator.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2DAC0FEA22CBDE8F00CB7F95 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				2DAC0FEB22CBDEA900CB7F95 /* SignUpViewController.swift */,
+				2DAC0FEC22CBDEA900CB7F95 /* SignUpViewController.xib */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		A5F34CCE1BCA072D4E36FAA8 /* Frameworks */ = {
@@ -227,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAC0FEE22CBDEA900CB7F95 /* SignUpViewController.xib in Resources */,
 				2D1CF3CD22CBC89400650AB0 /* Login.storyboard in Resources */,
 				2D1CF3BD22CBC67300650AB0 /* LaunchScreen.storyboard in Resources */,
 				2D1CF3BA22CBC67300650AB0 /* Assets.xcassets in Resources */,
@@ -270,6 +299,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-GFree/Pods-GFree-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
+				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
@@ -283,6 +313,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
@@ -302,10 +333,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DAC0FE922CBD7E500CB7F95 /* LoginVerificator.swift in Sources */,
 				2DAC0FE422CBD13700CB7F95 /* ViewExtension.swift in Sources */,
 				2DAC0FE222CBD0E200CB7F95 /* ColorRes.swift in Sources */,
+				2DAC0FE622CBD5CF00CB7F95 /* RxExtensions.swift in Sources */,
 				2D7A78FB22CBCA5400AE8B07 /* LoginViewModel.swift in Sources */,
 				2D1CF3D122CBC9D000650AB0 /* LoginViewController.swift in Sources */,
+				2DAC0FED22CBDEA900CB7F95 /* SignUpViewController.swift in Sources */,
 				2D1CF3B522CBC67300650AB0 /* MainViewController.swift in Sources */,
 				2D1CF3B322CBC67300650AB0 /* AppDelegate.swift in Sources */,
 			);

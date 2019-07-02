@@ -8,6 +8,15 @@
 
 import UIKit
 
-extension UIColor{
-	public static let primaryColor = UIColor.init(red: 122/255, green: 150/255, blue: 194/255, alpha: 1.0)
+enum ColorRes : String{
+	case colorPrimary = "colorPrimary"
 }
+extension ColorRes{
+	var color : UIColor{
+		return UIColor(named: self.rawValue)!
+	}
+
+}
+
+
+

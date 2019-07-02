@@ -43,7 +43,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p5W-Ek-KPs" customClass="HoshiTextField" customModule="TextFieldEffects">
-                                <rect key="frame" x="56" y="239.5" width="263" height="55"/>
+                                <rect key="frame" x="56" y="224.5" width="263" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="55" id="dXa-Lr-iHf"/>
                                 </constraints>
@@ -66,7 +66,7 @@
                                 </userDefinedRuntimeAttributes>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sz6-jR-Z2t" customClass="SwiftyCustomContentButton" customModule="SwiftyButton">
-                                <rect key="frame" x="199" y="374.5" width="120" height="50"/>
+                                <rect key="frame" x="229" y="359.5" width="90" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="FOT-82-AtG"/>
                                     <constraint firstAttribute="width" constant="90" id="jsR-Yx-jco"/>
@@ -90,7 +90,7 @@
                                 </userDefinedRuntimeAttributes>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cpP-qs-P0s" customClass="SwiftyCustomContentButton" customModule="SwiftyButton">
-                                <rect key="frame" x="127" y="308" width="120" height="50"/>
+                                <rect key="frame" x="119" y="359.5" width="90" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="XNQ-Wt-pdZ"/>
                                     <constraint firstAttribute="height" constant="40" id="pEo-54-WqF"/>
@@ -111,6 +111,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="signupbutton"/>
                                 </userDefinedRuntimeAttributes>
                             </button>
                         </subviews>
@@ -137,6 +138,7 @@
                         <outlet property="mEmailTextField" destination="ckX-H3-61o" id="Kl4-yC-2Ki"/>
                         <outlet property="mPasswordTextField" destination="p5W-Ek-KPs" id="NnK-uu-tcp"/>
                         <outlet property="mSignInButton" destination="sz6-jR-Z2t" id="5ys-Zj-lT7"/>
+                        <outlet property="mSignUpButton" destination="cpP-qs-P0s" id="ild-n7-rzV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CU4-4W-NnF" userLabel="First Responder" sceneMemberID="firstResponder"/>

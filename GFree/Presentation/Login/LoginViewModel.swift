@@ -8,11 +8,15 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 
 
 class LoginViewModel{
 	
 	let disposeBag = DisposeBag()
+	
+	let emailText : BehaviorRelay<String?> = BehaviorRelay(value: "")
+	let passwordText : BehaviorRelay<String?> = BehaviorRelay(value: "")
 	
 	
 	required init() {
