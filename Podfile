@@ -13,8 +13,7 @@ target 'GFree' do
   pod 'Alamofire'
   
   pod 'TextFieldEffects'
-  pod 'SwiftyButton/CustomContent'
-  pod 'MaterialComponents/BottomSheet'
-  
+  pod 'PureLayout'
+  pod 'FittedSheets'
   
 end

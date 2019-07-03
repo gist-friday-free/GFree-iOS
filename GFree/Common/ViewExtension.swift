@@ -76,6 +76,7 @@ extension UIView {
 			return layer.shadowRadius
 		}
 		set {
+			layer.masksToBounds=false
 			layer.shadowRadius = newValue
 		}
 	}

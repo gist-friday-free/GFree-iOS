@@ -1,66 +1,45 @@
 PODS:
   - Alamofire (4.8.2)
+  - FittedSheets (1.3.0)
   - Hero (1.4.0)
-  - MaterialComponents/BottomSheet (81.0.0):
-    - MaterialComponents/private/KeyboardWatcher
-    - MaterialComponents/private/Math
-    - MaterialComponents/ShapeLibrary
-    - MaterialComponents/Shapes
-  - MaterialComponents/private/Application (81.0.0)
-  - MaterialComponents/private/KeyboardWatcher (81.0.0):
-    - MaterialComponents/private/Application
-  - MaterialComponents/private/Math (81.0.0)
-  - MaterialComponents/ShadowElevations (81.0.0)
-  - MaterialComponents/ShadowLayer (81.0.0):
-    - MaterialComponents/ShadowElevations
-  - MaterialComponents/ShapeLibrary (81.0.0):
-    - MaterialComponents/private/Math
-    - MaterialComponents/Shapes
-  - MaterialComponents/Shapes (81.0.0):
-    - MaterialComponents/private/Math
-    - MaterialComponents/ShadowLayer
   - PureLayout (3.1.4)
   - RxCocoa (4.5.0):
     - RxSwift (>= 4.4.2, ~> 4.4)
   - RxSwift (4.5.0)
   - SnapKit (4.2.0)
-  - SwiftyButton/CustomContent (0.5.0):
-    - PureLayout (~> 3.0)
   - TextFieldEffects (1.5.1)
 
 DEPENDENCIES:
   - Alamofire
+  - FittedSheets
   - Hero
-  - MaterialComponents/BottomSheet
+  - PureLayout
   - RxCocoa
   - RxSwift
   - SnapKit
-  - SwiftyButton/CustomContent
   - TextFieldEffects
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Alamofire
+    - FittedSheets
     - Hero
-    - MaterialComponents
     - PureLayout
     - RxCocoa
     - RxSwift
     - SnapKit
-    - SwiftyButton
     - TextFieldEffects
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
+  FittedSheets: 15788dc0bc9d57eed1842e4ccb85ae82d6b352e2
   Hero: bac92350d7201a1a940003e0767c7b52ce7c99a1
-  MaterialComponents: 9ef60e1abd89463ac018ca6d354be41fd5df059a
   PureLayout: f08c01b8dec00bb14a1fefa3de4c7d9c265df85e
   RxCocoa: cbf70265dc65a981d4ac982e513c10cf23df24a0
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
   SnapKit: fe8a619752f3f27075cc9a90244d75c6c3f27e2a
-  SwiftyButton: 7f1c7774a0aa721cbb6ea287742198ea0ee50c05
   TextFieldEffects: 7d372f58aeaf9acd9626bbf962680aef926b085d
 
-PODFILE CHECKSUM: f3e2cd832f73571d261b4e74a2b10bb53a88f95f
+PODFILE CHECKSUM: 7662dbf52f5fcac06e04447c63b83e2e4d867e5a
 
 COCOAPODS: 1.5.3

@@ -21,6 +21,8 @@
 		2DAC0FE922CBD7E500CB7F95 /* LoginVerificator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FE822CBD7E500CB7F95 /* LoginVerificator.swift */; };
 		2DAC0FED22CBDEA900CB7F95 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FEB22CBDEA900CB7F95 /* SignUpViewController.swift */; };
 		2DAC0FEE22CBDEA900CB7F95 /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2DAC0FEC22CBDEA900CB7F95 /* SignUpViewController.xib */; };
+		2DAC0FF022CC574B00CB7F95 /* ViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FEF22CC574B00CB7F95 /* ViewControllerExtensions.swift */; };
+		2DAC0FF222CC5A6B00CB7F95 /* ScreenUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DAC0FF122CC5A6B00CB7F95 /* ScreenUtil.swift */; };
 		A84EBC80637EDF58914DE2E4 /* Pods_GFree.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B26800A362B7ECD8E8E03CF /* Pods_GFree.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +44,8 @@
 		2DAC0FE822CBD7E500CB7F95 /* LoginVerificator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVerificator.swift; sourceTree = "<group>"; };
 		2DAC0FEB22CBDEA900CB7F95 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		2DAC0FEC22CBDEA900CB7F95 /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
+		2DAC0FEF22CC574B00CB7F95 /* ViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtensions.swift; sourceTree = "<group>"; };
+		2DAC0FF122CC5A6B00CB7F95 /* ScreenUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenUtil.swift; sourceTree = "<group>"; };
 		64FB35DC3C0326843EC50514 /* Pods-GFree.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GFree.release.xcconfig"; path = "Pods/Target Support Files/Pods-GFree/Pods-GFree.release.xcconfig"; sourceTree = "<group>"; };
 		D647009594476304485EF62A /* Pods-GFree.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GFree.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GFree/Pods-GFree.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -130,6 +134,8 @@
 			children = (
 				2DAC0FE322CBD13700CB7F95 /* ViewExtension.swift */,
 				2DAC0FE522CBD5CF00CB7F95 /* RxExtensions.swift */,
+				2DAC0FEF22CC574B00CB7F95 /* ViewControllerExtensions.swift */,
+				2DAC0FF122CC5A6B00CB7F95 /* ScreenUtil.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -154,9 +160,9 @@
 			isa = PBXGroup;
 			children = (
 				2DAC0FEA22CBDE8F00CB7F95 /* SignUp */,
-				2D1CF3D022CBC9D000650AB0 /* LoginViewController.swift */,
 				2D1CF3CC22CBC89400650AB0 /* Login.storyboard */,
 				2D7A78FA22CBCA5400AE8B07 /* LoginViewModel.swift */,
+				2D1CF3D022CBC9D000650AB0 /* LoginViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -298,13 +304,12 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GFree/Pods-GFree-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/FittedSheets/FittedSheets.framework",
 				"${BUILT_PRODUCTS_DIR}/Hero/Hero.framework",
-				"${BUILT_PRODUCTS_DIR}/MaterialComponents/MaterialComponents.framework",
 				"${BUILT_PRODUCTS_DIR}/PureLayout/PureLayout.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyButton/SwiftyButton.framework",
 				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -312,13 +317,12 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FittedSheets.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hero.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MaterialComponents.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PureLayout.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,11 +340,13 @@
 				2DAC0FE922CBD7E500CB7F95 /* LoginVerificator.swift in Sources */,
 				2DAC0FE422CBD13700CB7F95 /* ViewExtension.swift in Sources */,
 				2DAC0FE222CBD0E200CB7F95 /* ColorRes.swift in Sources */,
+				2DAC0FF222CC5A6B00CB7F95 /* ScreenUtil.swift in Sources */,
 				2DAC0FE622CBD5CF00CB7F95 /* RxExtensions.swift in Sources */,
 				2D7A78FB22CBCA5400AE8B07 /* LoginViewModel.swift in Sources */,
 				2D1CF3D122CBC9D000650AB0 /* LoginViewController.swift in Sources */,
 				2DAC0FED22CBDEA900CB7F95 /* SignUpViewController.swift in Sources */,
 				2D1CF3B522CBC67300650AB0 /* MainViewController.swift in Sources */,
+				2DAC0FF022CC574B00CB7F95 /* ViewControllerExtensions.swift in Sources */,
 				2D1CF3B322CBC67300650AB0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

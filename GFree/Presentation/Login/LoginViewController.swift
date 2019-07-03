@@ -8,16 +8,15 @@
 
 import UIKit
 import TextFieldEffects
-import SwiftyButton
 import RxSwift
 import RxCocoa
-import MaterialComponents.MaterialBottomSheet
+import FittedSheets
 
 class LoginViewController: UIViewController {
 	@IBOutlet var mEmailTextField: HoshiTextField!
 	@IBOutlet var mPasswordTextField: HoshiTextField!
-	@IBOutlet var mSignInButton: SwiftyCustomContentButton!
-	@IBOutlet var mSignUpButton: SwiftyCustomContentButton!
+	@IBOutlet var mSignInButton: UIButton!
+	@IBOutlet var mSignUpButton: UIButton!
 	
 	private let mDisposeBag = DisposeBag()
 	private let mViewModel = LoginViewModel()
@@ -37,7 +36,7 @@ extension LoginViewController{
 //MARK: Setup
 extension LoginViewController{
 	private func setupView(){
-		
+		self.mSignUpButton.hero.id = "signupbutton"
 	}
 	private func setupBinding(){
 		(mEmailTextField.rx.text <-> mViewModel.emailText).disposed(by: mDisposeBag)
@@ -113,11 +112,17 @@ extension LoginViewController{
 	private func presentSignUpBottomSheet(){
 		// View controller the bottom sheet will hold
 		let viewController = SignUpViewController()
-		// Initialize the bottom sheet with the view controller just created
-		let bottomSheet: MDCBottomSheetController = MDCBottomSheetController(contentViewController: viewController)
-		viewController.view.backgroundColor = ColorRes.colorPrimary.color
-		// Present the bottom sheet
-		present(bottomSheet, animated: true, completion: nil)
+		
+		let bottomSheet = SheetViewController(controller: viewController, sizes: [SheetSize.fixed(screenHeight * 0.8)])
+		
+		bottomSheet.hero.isEnabled = true
+		bottomSheet.topCornersRadius = 15
+		bottomSheet.extendBackgroundBehindHandle = true
+		
+		
+		
+		
+		self.present(bottomSheet, animated: false, completion: nil)
 	}
 }
 

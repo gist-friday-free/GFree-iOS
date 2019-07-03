@@ -8,27 +8,36 @@
 
 import UIKit
 import Hero
+import FittedSheets
+import TextFieldEffects
+import RxSwift
+import RxCocoa
 
 class SignUpViewController: UIViewController {
-
 	@IBOutlet var mSignUpButton: UIButton!
+	@IBOutlet var mCancelButton: UIButton!
+	@IBOutlet var mEmailTextField : HoshiTextField!
+	@IBOutlet var mPasswordTextField : HoshiTextField!
+	
+	private let disposeBag = DisposeBag()
+}
+
+extension SignUpViewController{
 	override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+		super.viewDidLoad()
+		
 		self.hero.isEnabled = true
-		self.mSignUpButton.hero.id = "signupbutton"
-    }
+		
+		setupBinding()
+	}
+}
 
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+extension SignUpViewController{
+	private func setupBinding(){
+		mCancelButton.rx.controlEvent(.touchUpInside)
+			.throttle(0.3, scheduler: MainScheduler.instance)
+			.subscribe(onNext : {
+				self.sheetViewController?.closeSheet()
+			}).disposed(by: disposeBag)
+	}
 }
