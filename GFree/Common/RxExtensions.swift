@@ -9,9 +9,18 @@
 import Foundation
 import RxSwift
 import RxCocoa
-
+import Firebase
 
 infix operator <->
+
+extension Single{
+	func addObserver() -> Single<User>{
+		return self
+			.subscribeOn(ConcurrentDispatchQueueScheduler.init(qos: .background))
+			.observeOn(MainScheduler.instance) as! Single
+	}
+}
+
 
 extension ObservableType {
 	func currentAndPrevious() -> Observable<(current: E, previous: E)> {

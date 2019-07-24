@@ -16,4 +16,7 @@ target 'GFree' do
   pod 'PureLayout'
   pod 'FittedSheets'
   
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Auth'
+  
 end

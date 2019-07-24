@@ -32,6 +32,12 @@ extension LoginViewController{
 		setupView()
 		setupBinding()
 	}
+	override func viewWillAppear(_ animated: Bool) {
+		mViewModel.viewWillAppear()
+	}
+	override func viewWillDisappear(_ animated: Bool) {
+		mViewModel.viewWillDisappear()
+	}
 }
 //MARK: Setup
 extension LoginViewController{
@@ -85,8 +91,8 @@ extension LoginViewController{
 		
 		mSignInButton.rx.controlEvent(.touchUpInside)
 			.throttle(0.5, scheduler: MainScheduler.instance)
-			.subscribe(onNext:{
-				
+			.subscribe(onNext:{[unowned self] in
+				self.mViewModel.signIn()
 			}).disposed(by: mDisposeBag)
 		
 		mSignUpButton.rx.controlEvent(.touchUpInside)
@@ -94,6 +100,8 @@ extension LoginViewController{
 			.subscribe(onNext:{[unowned self] in
 				self.presentSignUpBottomSheet()
 			}).disposed(by: mDisposeBag)
+		
+		let alert = UIAlertController(title: "1", message: <#T##String?#>, preferredStyle: <#T##UIAlertController.Style#>
 	}
 }
 //MARK: Action

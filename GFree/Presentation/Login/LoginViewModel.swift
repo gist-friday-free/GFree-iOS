@@ -9,9 +9,11 @@
 import Foundation
 import RxSwift
 import RxCocoa
+import Firebase
 
 
-class LoginViewModel{
+class LoginViewModel : ViewModel{
+	
 	
 	let disposeBag = DisposeBag()
 	
@@ -20,8 +22,36 @@ class LoginViewModel{
 	
 	
 	required init() {
+	}
+	
+	func viewWillAppear() {
+		checkAlreadyLogin()
+	}
+	func viewWillDisappear() {
 		
 	}
 	
 	
+}
+
+
+extension LoginViewModel{
+	func signIn(){
+		Repository.auth.signIn(email: emailText.value ?? "", password: passwordText.value ?? "")
+			.addObserver()
+			.subscribe(onSuccess: { user in
+				print(user)
+			}, onError: {
+				print($0)
+			}).disposed(by: disposeBag)
+		
+	}
+	
+	private func checkAlreadyLogin(){
+		if Repository.auth.checkAlreadyLogin(){
+			
+		}else{
+			print("noUser")
+		}
+	}
 }

@@ -8,15 +8,9 @@
 
 import UIKit
 
-enum ColorRes : String{
-	case colorPrimary = "colorPrimary"
-}
-extension ColorRes{
-	var color : UIColor{
-		return UIColor(named: self.rawValue)!
-	}
 
+extension UIColor{
+	@nonobjc static var colorPrimary = UIColor(named: "colorPrimary")!
 }
-
 
 
